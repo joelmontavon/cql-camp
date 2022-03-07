@@ -38,7 +38,7 @@ var App = {
               self.logText += '\n' + '>> ' + entry.resource.id + '=' + parameters.value;
               self.status = 'success';
             } else {
-              self.logText += '\n' + '>> ' + entry.resource.id + ' ' + parameters.location + ' ' + parameters.value;
+              self.logText += '\n' + '>> ' + entry.resource.id + ' ' + parameters.location + ' ' + parameters.error;
               self.status = 'error';
             }
           })
@@ -59,6 +59,8 @@ var App = {
       this.log = new CodeFlask('#log', { language: 'js', readonly: true});
       document.querySelector('#log>.codeflask').style = "height: 18vh; width: 95vw;";
       this.editor.updateCode("define bla:\n\t1>0");
+
+      flask.addLanguage('ruby', Prism.languages['ruby']);
     }
 }
 
