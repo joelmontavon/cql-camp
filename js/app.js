@@ -59,8 +59,7 @@ var App = {
       this.log = new CodeFlask('#log', { language: 'js', readonly: true});
       document.querySelector('#log>.codeflask').style = "height: 18vh; width: 95vw;";
       this.editor.updateCode("define bla:\n\t1>0");
-
-      flask.addLanguage('ruby', Prism.languages['ruby']);
+      //CodeFlask.addLanguage('ruby', Prism.languages['ruby']);
     }
 }
 
